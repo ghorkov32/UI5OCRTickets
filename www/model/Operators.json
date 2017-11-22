@@ -1,0 +1,262 @@
+[
+  {
+    "_id": "59f0883cf6fe5964b7865eae",
+    "isActive": false,
+    "age": 34,
+    "status": "On Duty",
+    "name": "Juanita Campbell",
+    "plant": "",
+    "email": "juanitacampbell@magnemo.com",
+    "phone": "+1 (824) 513-3165"
+  },
+  {
+    "_id": "59f0883c791e8f9a99692145",
+    "isActive": true,
+    "age": 22,
+    "status": "Off work",
+    "name": "Clara Huff",
+    "plant": "",
+    "email": "clarahuff@magnemo.com",
+    "phone": "+1 (993) 538-3788"
+  },
+  {
+    "_id": "59f0883ca9b3a649865b2b2f",
+    "isActive": true,
+    "age": 29,
+    "status": "Leave of absence",
+    "name": "Guerra Pierce",
+    "plant": "DDM13",
+    "email": "guerrapierce@magnemo.com",
+    "phone": "+1 (856) 450-3150"
+  },
+  {
+    "_id": "59f0883cdecc7c16137c5358",
+    "isActive": false,
+    "age": 32,
+    "status": "On Duty",
+    "name": "Minerva Alexander",
+    "plant": "DDM22",
+    "email": "minervaalexander@magnemo.com",
+    "phone": "+1 (968) 561-3456"
+  },
+  {
+    "_id": "59f0883c0ff8dd7c9ab9663d",
+    "isActive": true,
+    "age": 25,
+    "status": "Leave of absence",
+    "name": "Kerri Sanchez",
+    "plant": "DDM13",
+    "email": "kerrisanchez@magnemo.com",
+    "phone": "+1 (842) 403-2741"
+  },
+  {
+    "_id": "59f0883c5204b02763233dd2",
+    "isActive": false,
+    "age": 38,
+    "status": "Off work",
+    "name": "Maxine Hatfield",
+    "plant": "DDM13",
+    "email": "maxinehatfield@magnemo.com",
+    "phone": "+1 (846) 551-3278"
+  },
+  {
+    "_id": "59f0883cfd20ca1ebf2b125a",
+    "isActive": false,
+    "age": 35,
+    "status": "Leave of absence",
+    "name": "Helena Rowe",
+    "plant": "DDM22",
+    "email": "helenarowe@magnemo.com",
+    "phone": "+1 (892) 557-3478"
+  },
+  {
+    "_id": "59f0883c874007c34749a5b3",
+    "isActive": false,
+    "age": 26,
+    "status": "Leave of absence",
+    "name": "Stevenson Howell",
+    "plant": "AA73",
+    "email": "stevensonhowell@magnemo.com",
+    "phone": "+1 (908) 465-3011"
+  },
+  {
+    "_id": "59f0883cb5ff5333eda08bcf",
+    "isActive": false,
+    "age": 24,
+    "status": "Off work",
+    "name": "Kristen Watson",
+    "plant": "B172",
+    "email": "kristenwatson@magnemo.com",
+    "phone": "+1 (884) 416-2831"
+  },
+  {
+    "_id": "59f0883cdc84be0c9105efd5",
+    "isActive": false,
+    "age": 38,
+    "status": "Off work",
+    "name": "Concetta Brown",
+    "plant": "B172",
+    "email": "concettabrown@magnemo.com",
+    "phone": "+1 (815) 527-2605"
+  },
+  {
+    "_id": "59f0883c8510c56a21dd51bb",
+    "isActive": false,
+    "age": 30,
+    "status": "Off work",
+    "name": "Mullen Simon",
+    "plant": "DDM13",
+    "email": "mullensimon@magnemo.com",
+    "phone": "+1 (960) 548-3605"
+  },
+  {
+    "_id": "59f0883cc048d5fb7ed720a1",
+    "isActive": false,
+    "age": 26,
+    "status": "Leave of absence",
+    "name": "Wallace Hampton",
+    "plant": "B172",
+    "email": "wallacehampton@magnemo.com",
+    "phone": "+1 (953) 535-2475"
+  },
+  {
+    "_id": "59f0883cfa4482c206f34a23",
+    "isActive": true,
+    "age": 33,
+    "status": "On Duty",
+    "name": "Tamera Woods",
+    "plant": "DDM22",
+    "email": "tamerawoods@magnemo.com",
+    "phone": "+1 (921) 516-3878"
+  },
+  {
+    "_id": "59f0883c4ebafe27778f7d51",
+    "isActive": false,
+    "age": 22,
+    "status": "On Duty",
+    "name": "Jaclyn Grimes",
+    "plant": "DDM13",
+    "email": "jaclyngrimes@magnemo.com",
+    "phone": "+1 (960) 425-2641"
+  },
+  {
+    "_id": "59f0883c0507a1384a353c6c",
+    "isActive": false,
+    "age": 23,
+    "status": "Off work",
+    "name": "Oconnor Castaneda",
+    "plant": "AA73",
+    "email": "oconnorcastaneda@magnemo.com",
+    "phone": "+1 (905) 538-3787"
+  },
+  {
+    "_id": "59f0883cfd641b6cfe495d00",
+    "isActive": false,
+    "age": 24,
+    "status": "Leave of absence",
+    "name": "Hampton Snider",
+    "plant": "DDM22",
+    "email": "hamptonsnider@magnemo.com",
+    "phone": "+1 (902) 465-2925"
+  },
+  {
+    "_id": "59f0883c7d7574c24cd724e3",
+    "isActive": true,
+    "age": 23,
+    "status": "Off work",
+    "name": "Chen Stewart",
+    "plant": "AA73",
+    "email": "chenstewart@magnemo.com",
+    "phone": "+1 (832) 535-3887"
+  },
+  {
+    "_id": "59f0883c60aabf8b7a6dbb13",
+    "isActive": true,
+    "age": 27,
+    "status": "Leave of absence",
+    "name": "Mavis Compton",
+    "plant": "AA73",
+    "email": "maviscompton@magnemo.com",
+    "phone": "+1 (820) 491-3185"
+  },
+  {
+    "_id": "59f0883c095e8bcce071ef8a",
+    "isActive": false,
+    "age": 30,
+    "status": "Leave of absence",
+    "name": "Little Gonzales",
+    "plant": "",
+    "email": "littlegonzales@magnemo.com",
+    "phone": "+1 (962) 506-3630"
+  },
+  {
+    "_id": "59f0883c33c273ff926a942e",
+    "isActive": false,
+    "age": 28,
+    "status": "Off work",
+    "name": "Cruz Cruz",
+    "plant": "DDM22",
+    "email": "cruzcruz@magnemo.com",
+    "phone": "+1 (954) 546-3122"
+  },
+  {
+    "_id": "59f0883c608294ce73f8153a",
+    "isActive": true,
+    "age": 21,
+    "status": "On Duty",
+    "name": "Shaw Jennings",
+    "plant": "AA73",
+    "email": "shawjennings@magnemo.com",
+    "phone": "+1 (996) 459-2902"
+  },
+  {
+    "_id": "59f0883c45de2363852c2880",
+    "isActive": true,
+    "age": 34,
+    "status": "On Duty",
+    "name": "Inez Stuart",
+    "plant": "DDM13",
+    "email": "inezstuart@magnemo.com",
+    "phone": "+1 (947) 457-2178"
+  },
+  {
+    "_id": "59f0883ce398df3cee6abe82",
+    "isActive": true,
+    "age": 24,
+    "status": "Leave of absence",
+    "name": "Chase Baird",
+    "plant": "",
+    "email": "chasebaird@magnemo.com",
+    "phone": "+1 (803) 401-3666"
+  },
+  {
+    "_id": "59f0883ca8c9820187cb7256",
+    "isActive": true,
+    "age": 38,
+    "status": "Leave of absence",
+    "name": "Gomez Moses",
+    "plant": "AA73",
+    "email": "gomezmoses@magnemo.com",
+    "phone": "+1 (866) 404-2020"
+  },
+  {
+    "_id": "59f0883c10e1c094101a4e25",
+    "isActive": false,
+    "age": 32,
+    "status": "On Duty",
+    "name": "Sampson Carey",
+    "plant": "DDM22",
+    "email": "sampsoncarey@magnemo.com",
+    "phone": "+1 (947) 494-2955"
+  },
+  {
+    "_id": "59f0883c87004ad6d0df43ed",
+    "isActive": false,
+    "age": 29,
+    "status": "Off work",
+    "name": "Callahan Burt",
+    "plant": "AA73",
+    "email": "callahanburt@magnemo.com",
+    "phone": "+1 (938) 557-2632"
+  }
+]
