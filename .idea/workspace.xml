@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aee6ea4e-9de5-4f2e-86df-65e3281acc76" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/model/Operators.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/model/PlantInformation.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/i18n/i18n.properties" afterPath="$PROJECT_DIR$/www/i18n/i18n.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/view/Main.view.xml" afterPath="$PROJECT_DIR$/www/view/Main.view.xml" />
-    </list>
+    <list default="true" id="aee6ea4e-9de5-4f2e-86df-65e3281acc76" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -75,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/www/i18n/i18n.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -214,12 +207,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511364897232</updated>
-      <workItem from="1511364898555" duration="2824000" />
+      <workItem from="1511364898555" duration="3183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2824000" />
+    <option name="totallyTimeSpent" value="3183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="23" width="1400" height="797" extended-state="0" />
@@ -266,7 +259,7 @@
     <entry file="file://$PROJECT_DIR$/www/i18n/i18n.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
           <folding />
         </state>
       </provider>
