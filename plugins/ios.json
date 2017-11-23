@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.ghorkov32.UI5OCRTickets"
-        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ghorkov32.UI5OCRTickets"
         },
@@ -24,7 +21,16 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ghorkov32.UI5OCRTickets"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.ghorkov32.UI5OCRTickets"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ghorkov32.UI5OCRTickets"
+        }
+    }
 }

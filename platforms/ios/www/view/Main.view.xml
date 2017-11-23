@@ -1,9 +1,88 @@
-<mvc:View controllerName="UI5OCRTickets.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" controllerName="UI5OCRTickets.controller.Main"
 	displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<FlexBox width="100%" id="__box0" alignItems="Inherit" alignContent="Center" justifyContent="SpaceAround">
+
+						<items>
+
+							<Button xmlns="sap.m" text="Take photo" width="100%" id="__button0"
+                                    activeIcon="sap-icon://camera" press="onClickTakePhoto" icon="sap-icon://camera"
+                                    class="sapUiSmallMarginTopBottom"/>
+
+						</items>
+
+					</FlexBox>
+
+					<VBox width="100%" direction="Column" id="__vbox0" alignContent="SpaceAround"
+						  justifyContent="SpaceAround" class="sapUiSmallMarginTopBottom">
+
+						<items>
+
+							<sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form"
+													 editable="true" id="__form1">
+
+								<sap.ui.layout.form:formContainers><sap.ui.layout.form:FormContainer
+										title="Ticket info" id="__container2">
+
+									<sap.ui.layout.form:formElements><sap.ui.layout.form:FormElement
+											label="Place" id="__element4">
+
+										<sap.ui.layout.form:fields>
+
+											<Input width="100%" id="__input5"/>
+
+										</sap.ui.layout.form:fields>
+
+									</sap.ui.layout.form:FormElement>
+
+										<sap.ui.layout.form:FormElement label="Company Code" id="__element1">
+
+											<sap.ui.layout.form:fields>
+
+												<Input width="100%" id="__input1"/>
+
+											</sap.ui.layout.form:fields>
+
+										</sap.ui.layout.form:FormElement>
+
+										<sap.ui.layout.form:FormElement label="Total" id="__element2">
+
+											<sap.ui.layout.form:fields>
+
+												<Input width="100%" id="__input2"/>
+
+											</sap.ui.layout.form:fields>
+
+										</sap.ui.layout.form:FormElement>
+
+										<sap.ui.layout.form:FormElement label="Date" id="__element0">
+
+											<sap.ui.layout.form:fields>
+
+												<Input width="100%" id="__input0"/>
+
+											</sap.ui.layout.form:fields>
+
+										</sap.ui.layout.form:FormElement>
+
+									</sap.ui.layout.form:formElements>
+
+								</sap.ui.layout.form:FormContainer>
+
+								</sap.ui.layout.form:formContainers>
+
+								<sap.ui.layout.form:layout>
+
+									<sap.ui.layout.form:ResponsiveGridLayout id="__layout0"/>
+
+								</sap.ui.layout.form:layout></sap.ui.layout.form:Form>
+						</items>
+
+					</VBox>
+				</content>
 			</Page>
 		</pages>
 	</App>

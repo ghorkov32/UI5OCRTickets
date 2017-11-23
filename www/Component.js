@@ -23,11 +23,19 @@ sap.ui.define([
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
 
+			/*
             window.Tesseract = Tesseract.create({
-                workerPath: '/util/tesseract/worker.js',
-                langPath: '/util/tesseract/',
-                corePath: '/util/tesseract/index.js'
+                workerPath: './util/tesseract/worker.js',
+                langPath: 'https://cdn.rawgit.com/naptha/tessdata/gh-pages/3.02/',
+                corePath: './util/tesseract/index.js'
             })
+            */
+
+            window.Tesseract = Tesseract.create({
+                workerPath: 'https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/worker.js',
+                langPath: 'https://cdn.rawgit.com/naptha/tessdata/gh-pages/3.02/',
+                corePath: 'https://cdn.rawgit.com/naptha/tesseract.js-core/0.1.0/index.js'
+            });
 		}
 	});
 });
