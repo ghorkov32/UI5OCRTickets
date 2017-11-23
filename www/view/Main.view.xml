@@ -8,7 +8,9 @@
 
 						<items>
 
-							<Button xmlns="sap.m" text="Take photo" width="100%" id="__button0" activeIcon="sap-icon://camera" icon="sap-icon://camera" class="sapUiSmallMarginTopBottom"/>
+							<Button xmlns="sap.m" text="Take photo" width="100%" id="__button0"
+                                    activeIcon="sap-icon://camera" press="onClickTakePhoto" icon="sap-icon://camera"
+                                    class="sapUiSmallMarginTopBottom"/>
 
 						</items>
 
