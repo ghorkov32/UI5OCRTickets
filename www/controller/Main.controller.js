@@ -30,6 +30,11 @@ sap.ui.define([
                             sap.ui.core.BusyIndicator.hide();
                         })
                         .finally(resultOrError => {
+
+                        var oCuil= /\d{2}[-]\d{8}[-]\d{1}/g;
+                        var sCuil= resultOrError.text.match(oCuil);
+
+                                other.byId("__input1").setValue(sCuil[0]);
                                 other.byId("__input5").setValue(result.text);
                             sap.ui.core.BusyIndicator.hide();
                         })

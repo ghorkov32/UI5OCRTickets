@@ -10,6 +10,16 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "cordova-android": "^6.3.0",
+    "cordova-plugin-whitelist": "1",
     "tesseract.js": "^1.0.10"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }
