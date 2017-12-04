@@ -31,12 +31,34 @@ sap.ui.define([
                         })
                         .finally(resultOrError => {
 
-                        var oCuil= /\d{2}[-]\d{8}[-]\d{1}/g;
-                        var sCuil= resultOrError.text.match(oCuil);
+                        var oDate= /(\d{2}(\/|-|\s)){2}\d{2}/;
+                        var oPlace= /\b.+S(\.)?(\s)?A(\.)?/i;
+                        var sDate= resultOrError.text.match(oDate);
+                        var sPlace= resultOrError.text.match(oPlace);
 
-                                other.byId("__input1").setValue(sCuil[0]);
-                                other.byId("__input5").setValue(result.text);
+                        try {
+                            other.byId("__input0").setValue(sDate[0]);
+
+
+                        }
+                        catch(err) {
+
+                            other.byId("__input0").setValue("");
+
+                        }
+                        try {
+                            other.byId("__input5").setValue(sPlace[0]);
+
+
+                        }
+                        catch(err) {
+
+                            other.byId("__input5").setValue("");
+
+                        }
+
                             sap.ui.core.BusyIndicator.hide();
+
                         })
 
                 },
