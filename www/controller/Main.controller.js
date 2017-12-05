@@ -24,30 +24,54 @@ sap.ui.define([
                             console.log(message);
                             sap.ui.core.BusyIndicator.show();
                         })
-                        .catch(err => console.error(err))
-                        .then(result => {
-                                other.byId("__input5").setValue(result.text);
-                            sap.ui.core.BusyIndicator.hide();
+                          .catch(err => console.error(err))
+                          .then(result => {
+                                  other.byId("__input5").setValue(result.text);
+                              sap.ui.core.BusyIndicator.hide();
                         })
                         .finally(resultOrError => {
 
-                        var oCuil= /\d{2}[-]\d{8}[-]\d{1}/g;
-                        var sCuil= resultOrError.text.match(oCuil);
-                        var oTotal=/(?:Total\:\s)(?:\w+\s)(\d+)(?:.|,|s)(\d+)/;
-                        var sTotal=resultOrError.text.match(oTotal);
-                        try {
-                                other.byId("__input1").setValue(sCuil[0]);
-                            }
-                        catch(err) {
-                                other.byId("__input1").setValue("");
-                            }
-                         try{
+                          var oDate= /(\d{2}(\/|-|\s)){2}\d{2}/;
+                          var oPlace= /\b.+S(\.)?(\s)?A(\.)?/i;
+                          var sDate= resultOrError.text.match(oDate);
+                          var sPlace= resultOrError.text.match(oPlace);
+
+                          try {
+                              other.byId("__input0").setValue(sDate[0]);
+
+
+                          }bcatch(err) {
+
+                              other.byId("__input0").setValue("");
+
+                          }
+                          try {
+                              other.byId("__input5").setValue(sPlace[0]);
+
+
+                          } catch(err) {
+
+                              other.byId("__input5").setValue("");
+
+                          }
+
+                          var oCuil= /\d{2}[-]\d{8}[-]\d{1}/g;
+                          var sCuil= resultOrError.text.match(oCuil);
+                          var oTotal=/(?:Total\:\s)(?:\w+\s)(\d+)(?:.|,|s)(\d+)/;
+                          var sTotal=resultOrError.text.match(oTotal);
+                          try {
+                                  other.byId("__input1").setValue(sCuil[0]);
+                          } catch(err) {
+                                  other.byId("__input1").setValue("");
+                          }
+                          try{
                                  other.byId("__input2").setValue(sTotal[1] + "." + sTotal[2]);
-                         }catch(err){
+                          } catch(err) {
                                  other.byId("__input2").setValue("");
-                         }
-                                other.byId("__input5").setValue(result.text);
+                          }
+                          other.byId("__input5").setValue(result.text);
                             sap.ui.core.BusyIndicator.hide();
+
                         })
 
                 },
