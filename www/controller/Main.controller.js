@@ -70,11 +70,13 @@ sap.ui.define([
                                  other.byId("__input2").setValue("");
                             }
                             var linesArray = [];
+                            var defaultVal = {text : "Please select a value"};
+                                linesArray.push(defaultVal)
 
                             for(var i = 0; i < resultOrError.lines.length; i++ ){
                                 var valToPush = {
                                     text: resultOrError.lines[i].text
-                                }
+                                };
                                 linesArray.push(valToPush);
                             }
                             sap.ui.core.BusyIndicator.hide();
@@ -100,6 +102,59 @@ sap.ui.define([
                     saveToPhotoAlbum: true
                 });
 
+        },
+        applyValues: function(control, model) {
+            control.setValue(model.oData.values);
+            model.setData("values", "");
+        },
+
+        onClickCopyText: function(oEvent){
+            var lineSelected = this.getView().byId("selectRecognizedText").getSelectedItem().getText();
+            var oSelectedItemModel = new sap.ui.model.json.JSONModel({
+                values: lineSelected
+            });
+            this.getView().setModel(oSelectedItemModel, "selectedMD");
+            var input0 = this.getView().byId("__input0");
+            var input1 = this.getView().byId("__input1");
+            var input2 = this.getView().byId("__input2");
+            var input5 = this.getView().byId("__input5");
+            var andother = this;
+            input0.addEventDelegate({
+                onfocusin : function() {
+                    if (input0.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input0, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
+            input1.addEventDelegate({
+                onfocusin : function() {
+                    if (input1.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input1, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
+            input2.addEventDelegate({
+                onfocusin : function() {
+                    if (input2.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input2, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
+            input5.addEventDelegate({
+                onfocusin : function() {
+                    if (input5.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input5, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
         },
 
 		/**

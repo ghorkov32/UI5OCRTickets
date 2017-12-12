@@ -1,4 +1,6 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" controllerName="UI5OCRTickets.controller.Main"
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml"
+		  xmlns:core="sap.ui.core"
+		  xmlns:mvc="sap.ui.core.mvc" controllerName="UI5OCRTickets.controller.Main"
 	displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
@@ -80,7 +82,21 @@
 
 								</sap.ui.layout.form:layout></sap.ui.layout.form:Form>
 						</items>
-
+						<Label text="Detected lines" class="sapUiTinyMarginTopBottom"
+							width="100%" />
+						<VBox width="100%" direction="Column" id="__vbox4" wrap="Wrap" class="sapUiMediumMargin">
+							<Select id="selectRecognizedText"  items="{dropdownSL>/values}"
+								class="sapUserSelect sapMBtnNormalWidth">
+								<core:ListItem key="{dropdownSL>text}" text="{dropdownSL>text}"
+									showSecondaryValues="false" />
+							</Select>
+						</VBox>
+						<FlexBox width="100%" id="__box1" alignItems="Inherit" alignContent="Center" justifyContent="SpaceAround">
+							<items>
+								<Button xmlns="sap.m" text="Copy line" width="100%" id="__button1"
+										activeIcon="sap-icon://add" press="onClickCopyText" icon="sap-icon://add"/>
+							</items>
+						</FlexBox>
 					</VBox>
 				</content>
 			</Page>

@@ -24,30 +24,69 @@ sap.ui.define([
                             console.log(message);
                             sap.ui.core.BusyIndicator.show();
                         })
-                        .catch(err => console.error(err))
-                        .then(result => {
-                                other.byId("__input5").setValue(result.text);
-                            sap.ui.core.BusyIndicator.hide();
+                          .catch(err => console.error(err))
+                          .then(result => {
+                                  other.byId("__input5").setValue(result.text);
+                              sap.ui.core.BusyIndicator.hide();
                         })
                         .finally(resultOrError => {
 
-                        var oCuil= /\d{2}[-]\d{8}[-]\d{1}/g;
-                        var sCuil= resultOrError.text.match(oCuil);
-                        var oTotal=/(?:Total\:\s)(?:\w+\s)(\d+)(?:.|,|s)(\d+)/;
-                        var sTotal=resultOrError.text.match(oTotal);
-                        try {
-                                other.byId("__input1").setValue(sCuil[0]);
+                            var oDate = /(\d{2}(\/|-|\s)){2}\d{2}/;
+                            var oPlace = /\b.+S(\.)?(\s)?A(\.)?/i;
+                            var sDate = resultOrError.text.match(oDate);
+                            var sPlace = resultOrError.text.match(oPlace);
+
+                            try {
+                              other.byId("__input0").setValue(sDate[0]);
+
+
+                            } catch(err) {
+
+                              other.byId("__input0").setValue("");
+
                             }
-                        catch(err) {
-                                other.byId("__input1").setValue("");
+                            try {
+                              other.byId("__input5").setValue(sPlace[0]);
+
+
+                            } catch(err) {
+
+                              other.byId("__input5").setValue("");
+
                             }
-                         try{
+
+                            var oCuil = /\d{2}[-]\d{8}[-]\d{1}/g;
+                            var sCuil = resultOrError.text.match(oCuil);
+                            var oTotal =/(?:Total\:\s)(?:\w+\s)(\d+)(?:.|,|s)(\d+)/;
+                            var sTotal =resultOrError.text.match(oTotal);
+                            try {
+                                  other.byId("__input1").setValue(sCuil[0]);
+                            } catch(err) {
+                                  other.byId("__input1").setValue("");
+                            }
+                            try{
                                  other.byId("__input2").setValue(sTotal[1] + "." + sTotal[2]);
-                         }catch(err){
+                            } catch(err) {
                                  other.byId("__input2").setValue("");
-                         }
-                                other.byId("__input5").setValue(result.text);
+                            }
+                            var linesArray = [];
+                            var defaultVal = {text : "Please select a value"};
+                                linesArray.push(defaultVal)
+
+                            for(var i = 0; i < resultOrError.lines.length; i++ ){
+                                var valToPush = {
+                                    text: resultOrError.lines[i].text
+                                };
+                                linesArray.push(valToPush);
+                            }
                             sap.ui.core.BusyIndicator.hide();
+                            //dropdown w/text lines
+                            var oDropdownModel = new sap.ui.model.json.JSONModel({
+                                values: linesArray
+                            });
+
+                            other.getView().setModel(oDropdownModel, "dropdownSL");
+
                         })
 
                 },
@@ -63,6 +102,59 @@ sap.ui.define([
                     saveToPhotoAlbum: true
                 });
 
+        },
+        applyValues: function(control, model) {
+            control.setValue(model.oData.values);
+            model.setData("values", "");
+        },
+
+        onClickCopyText: function(oEvent){
+            var lineSelected = this.getView().byId("selectRecognizedText").getSelectedItem().getText();
+            var oSelectedItemModel = new sap.ui.model.json.JSONModel({
+                values: lineSelected
+            });
+            this.getView().setModel(oSelectedItemModel, "selectedMD");
+            var input0 = this.getView().byId("__input0");
+            var input1 = this.getView().byId("__input1");
+            var input2 = this.getView().byId("__input2");
+            var input5 = this.getView().byId("__input5");
+            var andother = this;
+            input0.addEventDelegate({
+                onfocusin : function() {
+                    if (input0.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input0, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
+            input1.addEventDelegate({
+                onfocusin : function() {
+                    if (input1.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input1, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
+            input2.addEventDelegate({
+                onfocusin : function() {
+                    if (input2.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input2, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
+            input5.addEventDelegate({
+                onfocusin : function() {
+                    if (input5.getValue().length == 0){
+                        var model = andother.getView().getModel("selectedMD");
+                        andother.applyValues(input5, model);
+                        andother.getView().byId("selectRecognizedText").setSelectedItem(null);
+                    }
+                }
+            });
         },
 
 		/**

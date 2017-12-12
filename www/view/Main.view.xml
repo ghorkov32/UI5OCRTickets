@@ -91,6 +91,12 @@
 									showSecondaryValues="false" />
 							</Select>
 						</VBox>
+						<FlexBox width="100%" id="__box1" alignItems="Inherit" alignContent="Center" justifyContent="SpaceAround">
+							<items>
+								<Button xmlns="sap.m" text="Copy line" width="100%" id="__button1"
+										activeIcon="sap-icon://add" press="onClickCopyText" icon="sap-icon://add"/>
+							</items>
+						</FlexBox>
 					</VBox>
 				</content>
 			</Page>
