@@ -1,99 +1,71 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml"
-		  xmlns:core="sap.ui.core"
-		  xmlns:mvc="sap.ui.core.mvc" controllerName="UI5OCRTickets.controller.Main"
-	displayBlock="true" xmlns="sap.m">
-	<App>
-		<pages>
-			<Page title="{i18n>title}">
-				<content>
-					<FlexBox width="100%" id="__box0" alignItems="Inherit" alignContent="Center" justifyContent="SpaceAround">
+          xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc" controllerName="UI5OCRTickets.controller.Main"
+          displayBlock="true" xmlns="sap.m">
+    <App>
+        <pages>
+            <Page title="{i18n>title}">
+                <content>
+                    <FlexBox width="100%" id="__box0" alignItems="Inherit" alignContent="Center" justifyContent="SpaceAround">
 
-						<items>
+                        <items>
 
-							<Button xmlns="sap.m" text="Take photo" width="100%" id="__button0"
+                            <Button xmlns="sap.m" text="Take photo" width="100%" id="__button0"
                                     activeIcon="sap-icon://camera" press="onClickTakePhoto" icon="sap-icon://camera"
                                     class="sapUiSmallMarginTopBottom"/>
 
-						</items>
+                        </items>
 
-					</FlexBox>
+                    </FlexBox>
+                    <VBox width="100%" direction="Column" id="__vbox0" alignContent="SpaceAround"
+                          justifyContent="SpaceAround" class="sapUiSmallMarginBeginEnd" >
 
-					<VBox width="100%" direction="Column" id="__vbox0" alignContent="SpaceAround"
-						  justifyContent="SpaceAround" class="sapUiSmallMarginTopBottom">
+                        <items>
+                            <HBox width="90%" id="__hbox0" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
+                                <items>
+                                    <Label text="Place:" width="100%" id="__element4"/>
+                                    <Input width="100%" id="__input5"/>
+                                </items>
+                            </HBox>
+                            <HBox width="90%" id="__hbox1" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
+                                <items>
+                                    <Label text="Company Code:" width="100%" id="__element1"/>
+                                    <Input width="100%" id="__input1"/>
+                                </items>
+                            </HBox>
+                            <HBox width="90%" id="__hbox2" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
+                                <items>
+                                    <Label text="Total:" width="100%" id="__element2"/>
+                                    <Input width="100%" id="__input2"/>
+                                </items>
+                            </HBox>
+                            <HBox width="90%" id="__hbox3" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
+                                <items>
+                                    <Label text="Date:" width="100%" id="__element0"/>
+                                    <Input width="100%" id="__input0"/>
+                                </items>
+                            </HBox>
+                        </items>
 
-						<items>
 
-							<sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form"
-													 editable="true" id="__form1">
-
-								<sap.ui.layout.form:formContainers><sap.ui.layout.form:FormContainer
-										title="Ticket info" id="__container2">
-
-									<sap.ui.layout.form:formElements><sap.ui.layout.form:FormElement
-											label="Place" id="__element4">
-
-										<sap.ui.layout.form:fields>
-
-											<Input width="100%" id="__input5"/>
-
-										</sap.ui.layout.form:fields>
-
-									</sap.ui.layout.form:FormElement>
-
-										<sap.ui.layout.form:FormElement label="Company Code" id="__element1">
-
-											<sap.ui.layout.form:fields>
-
-												<Input width="100%" id="__input1"/>
-
-											</sap.ui.layout.form:fields>
-
-										</sap.ui.layout.form:FormElement>
-
-										<sap.ui.layout.form:FormElement label="Total" id="__element2">
-
-											<sap.ui.layout.form:fields>
-
-												<Input width="100%" id="__input2"/>
-
-											</sap.ui.layout.form:fields>
-
-										</sap.ui.layout.form:FormElement>
-
-										<sap.ui.layout.form:FormElement label="Date" id="__element0">
-
-											<sap.ui.layout.form:fields>
-
-												<Input width="100%" id="__input0"/>
-
-											</sap.ui.layout.form:fields>
-
-										</sap.ui.layout.form:FormElement>
-
-									</sap.ui.layout.form:formElements>
-
-								</sap.ui.layout.form:FormContainer>
-
-								</sap.ui.layout.form:formContainers>
-
-								<sap.ui.layout.form:layout>
-
-									<sap.ui.layout.form:ResponsiveGridLayout id="__layout0"/>
-
-								</sap.ui.layout.form:layout></sap.ui.layout.form:Form>
-						</items>
-						<Label text="Detected lines" class="sapUiTinyMarginTopBottom"
-							width="100%" />
-						<VBox width="100%" direction="Column" id="__vbox4" wrap="Wrap" class="sapUiMediumMargin">
-							<Select id="selectRecognizedText"  items="{dropdownSL>/values}"
-								class="sapUserSelect sapMBtnNormalWidth">
-								<core:ListItem key="{dropdownSL>text}" text="{dropdownSL>text}"
-									showSecondaryValues="false" />
-							</Select>
-						</VBox>
-					</VBox>
-				</content>
-			</Page>
-		</pages>
-	</App>
+                        <Label text="Detected lines" class="sapUiTinyMarginTopBottom"
+                               width="100%" />
+                        <VBox width="100%" direction="Column" id="__vbox4" wrap="Wrap" class="sapUiMediumMargin">
+                            <Select id="selectRecognizedText"  items="{dropdownSL>/values}"
+                                    class="sapUserSelect sapMBtnNormalWidth">
+                                <core:ListItem key="{dropdownSL>text}" text="{dropdownSL>text}"
+                                               showSecondaryValues="false" />
+                            </Select>
+                        </VBox>
+                        <FlexBox width="90%" id="__box1" alignItems="Inherit" alignContent="Center" justifyContent="SpaceAround">
+                            <items>
+                                <Button xmlns="sap.m" text="Copy line" width="100%" id="__button1"
+                                        activeIcon="sap-icon://add" press="onClickCopyText" icon="sap-icon://add"/>
+                            </items>
+                        </FlexBox>
+                    </VBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
 </mvc:View>
