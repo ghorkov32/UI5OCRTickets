@@ -13,7 +13,6 @@
                             <Button xmlns="sap.m" text="Take photo" width="100%" id="__button0"
                                     activeIcon="sap-icon://camera" press="onClickTakePhoto" icon="sap-icon://camera"
                                     class="sapUiSmallMarginTopBottom"/>
-
                         </items>
 
                     </FlexBox>
@@ -24,25 +23,37 @@
                             <HBox width="90%" id="__hbox0" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
                                 <items>
                                     <Label text="Place:" width="100%" id="__element4"/>
-                                    <Input width="100%" id="__input5"/>
+                                    <HBox width="100%" id="__hbox5" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
+                                        <Input width="80%" id="__input5" showTableSuggestionValueHelp="false"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button6" class="sapUiSmallMarginBegin"/>
+                                    </HBox>
                                 </items>
                             </HBox>
                             <HBox width="90%" id="__hbox1" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
                                 <items>
                                     <Label text="Company Code:" width="100%" id="__element1"/>
-                                    <Input width="100%" id="__input1"/>
+                                    <HBox width="100%" id="__hbox6" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
+                                        <Input width="80%" id="__input1" showTableSuggestionValueHelp="false"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button5" class="sapUiSmallMarginBegin"/>
+                                    </HBox>
                                 </items>
                             </HBox>
                             <HBox width="90%" id="__hbox2" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
                                 <items>
                                     <Label text="Total:" width="100%" id="__element2"/>
-                                    <Input width="100%" id="__input2"/>
+                                    <HBox width="100%" id="__hbox7" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
+                                        <Input width="80%" id="__input2" showTableSuggestionValueHelp="false"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button4" class="sapUiSmallMarginBegin"/>
+                                    </HBox>
                                 </items>
                             </HBox>
                             <HBox width="90%" id="__hbox3" justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
                                 <items>
                                     <Label text="Date:" width="100%" id="__element0"/>
-                                    <Input width="100%" id="__input0"/>
+                                    <HBox width="100%" id="__hbox8" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
+                                        <Input width="80%" id="__input0" showTableSuggestionValueHelp="false"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button3" class="sapUiSmallMarginBegin"/>
+                                    </HBox>
                                 </items>
                             </HBox>
                         </items>
