@@ -25,7 +25,7 @@
                                     <Label text="Place:" width="100%" id="__element4"/>
                                     <HBox width="100%" id="__hbox5" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
                                         <Input width="80%" id="__input5" showTableSuggestionValueHelp="false"/>
-                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button6" class="sapUiSmallMarginBegin"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="buttonPlace" class="sapUiSmallMarginBegin" press="onOpenDialog"/>
                                     </HBox>
                                 </items>
                             </HBox>
@@ -34,7 +34,7 @@
                                     <Label text="Company Code:" width="100%" id="__element1"/>
                                     <HBox width="100%" id="__hbox6" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
                                         <Input width="80%" id="__input1" showTableSuggestionValueHelp="false"/>
-                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button5" class="sapUiSmallMarginBegin"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="buttonCuil" class="sapUiSmallMarginBegin" press="onOpenDialog"/>
                                     </HBox>
                                 </items>
                             </HBox>
@@ -43,7 +43,7 @@
                                     <Label text="Total:" width="100%" id="__element2"/>
                                     <HBox width="100%" id="__hbox7" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
                                         <Input width="80%" id="__input2" showTableSuggestionValueHelp="false"/>
-                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button4" class="sapUiSmallMarginBegin"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="buttonTotal" class="sapUiSmallMarginBegin" press="onOpenDialog"/>
                                     </HBox>
                                 </items>
                             </HBox>
@@ -52,7 +52,7 @@
                                     <Label text="Date:" width="100%" id="__element0"/>
                                     <HBox width="100%" id="__hbox8" alignContent="Center" direction="Inherit" justifyContent="SpaceAround" renderType="Bare" wrap="WrapReverse" alignItems="Center">
                                         <Input width="80%" id="__input0" showTableSuggestionValueHelp="false"/>
-                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="__button3" class="sapUiSmallMarginBegin"/>
+                                        <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="buttonDate" class="sapUiSmallMarginBegin" press="onOpenDialog"/>
                                     </HBox>
                                 </items>
                             </HBox>
