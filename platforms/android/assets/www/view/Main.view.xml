@@ -2,7 +2,7 @@
           xmlns:core="sap.ui.core"
           xmlns:mvc="sap.ui.core.mvc" controllerName="UI5OCRTickets.controller.Main"
           displayBlock="true" xmlns="sap.m">
-    <App>
+    <App id="app">
         <pages>
             <Page title="{i18n>title}">
                 <content>
@@ -54,6 +54,11 @@
                                         <Input width="80%" id="__input0" showTableSuggestionValueHelp="false"/>
                                         <Button activeIcon="sap-icon://forward" icon="sap-icon://forward" width="10%" id="buttonDate" class="sapUiSmallMarginBegin" press="onOpenDialog"/>
                                     </HBox>
+                                </items>
+                            </HBox>
+                            <HBox width="90%"  justifyContent="SpaceAround" direction="Column" class="sapUiSmallMarginTopBottom">
+                                <items>
+                                    <Button  id="buttonProucts" text="Products List" width="95%"  class="sapUiSmallMarginBegin" press="onProdutsPage"/>
                                 </items>
                             </HBox>
                         </items>

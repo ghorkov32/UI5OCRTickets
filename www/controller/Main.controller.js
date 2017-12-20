@@ -306,6 +306,10 @@ sap.ui.define([
                 this.getView().byId("__input2").setValue(itemSelected);
             }
 
+        },
+        onProdutsPage : function(){
+            var onRootPage = sap.ui.core.UIComponent.getRouterFor(this);
+            onRootPage.navTo("Products");
         }
 
     });
