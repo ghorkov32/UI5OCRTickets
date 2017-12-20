@@ -54,6 +54,42 @@
 				"sap.uxap": {}
 			}
 		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "UI5OCRTickets.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"name": "Main",
+					"pattern": "",
+					"target": "Main"
+
+				},
+				{
+					"name": "Products",
+					"pattern": "Main",
+					"target": 	"Products"
+
+				}
+			],
+			"targets": {
+				"Main": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Main"
+
+				},
+
+				"Products": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Products"
+				}
+			}
+		},
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
