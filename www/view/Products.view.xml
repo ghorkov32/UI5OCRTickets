@@ -6,7 +6,13 @@ displayBlock="true" xmlns="sap.m" >
     <App>
         <pages>
             <Page title="Products" showNavButton="true" navButtonPress="onNavBack">
-
+                <content>
+                    <FlexBox width="100%" id="__box0" alignItems="Inherit" alignContent="Center" justifyContent="SpaceAround">
+                        <items>
+                            <Button xmlns="sap.m" text="Find headers" width="100%" class="sapUiSmallMarginTopBottom" press="onOpenHeaderDialog"/>
+                        </items>
+                    </FlexBox>
+                </content>
             </Page>
         </pages>
     </App>

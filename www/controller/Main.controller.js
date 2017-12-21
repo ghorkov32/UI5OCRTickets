@@ -310,6 +310,9 @@ sap.ui.define([
         onProdutsPage : function(){
             var onRootPage = sap.ui.core.UIComponent.getRouterFor(this);
             onRootPage.navTo("Products");
+            var bus = sap.ui.getCore().getEventBus();
+            var linesModel = this.getView().getModel("dropdownSL");
+            bus.publish("Products", "makeModel", linesModel);
         }
 
     });

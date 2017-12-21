@@ -290,7 +290,6 @@ sap.ui.define([
         },
 
         onCopyLine : function(oEvent) {
-
             var itemSelected = oEvent.oSource._$ItemPressed.context.innerText;
             var idButtonPress = this.getView().getModel("buttonIdModel").oData.input;
 
@@ -305,11 +304,14 @@ sap.ui.define([
             }else{
                 this.getView().byId("__input2").setValue(itemSelected);
             }
-
         },
+
         onProdutsPage : function(){
             var onRootPage = sap.ui.core.UIComponent.getRouterFor(this);
             onRootPage.navTo("Products");
+            var bus = sap.ui.getCore().getEventBus();
+            var linesModel = this.getView().getModel("dropdownSL");
+            bus.publish("Products", "makeModel", linesModel);
         }
 
     });
