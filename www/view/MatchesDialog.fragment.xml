@@ -1,0 +1,27 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core" >
+    <Dialog id="helloDialog" title="Pick a line">
+        <content>
+            <HBox alignContent="Center">
+                <Label text="Matches" />
+            </HBox>
+            <HBox  width="95%" >
+                <SelectList id="listViewMatches"   items="{matchesList>/listValues}" width="auto" itemPress="onCopyLine" >
+                    <core:Item text= "{matchesList>text}"/>
+                </SelectList >
+            </HBox>
+            <HBox>
+                <Label text="Detected lines" />
+            </HBox>
+            <HBox  width="95%" >
+                <SelectList id="listText"  class="sapUiResponsiveMargin" width="auto"  items="{dropdownSL>/values}" itemPress="onCopyLine" >
+                    <core:Item text="{dropdownSL>text}"/>
+                </SelectList >
+            </HBox>
+        </content>
+        <endButton>
+            <Button  text="Close" width="50%"  press="onCloseDialog"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
