@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core" >
+    <Dialog id="headerDialog" title="Pick a line">
+        <content>
+            <HBox  width="95%" >
+                <SelectList id="listViewMatches"   items="{listLines>/listValues}" width="auto" itemPress="onCopyHeader" >
+                    <core:Item text= "{listLines>text}"/>
+                </SelectList >
+            </HBox>
+        </content>
+        <endButton>
+            <Button  text="Close" width="50%"  press="onCloseHeaderDialog"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

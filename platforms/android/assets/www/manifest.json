@@ -12,6 +12,12 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"PatternsRegEx": {
+				"uri": "model/regExPatterns.json",
+				"type": "JSON"
+			}
 		}
 	},
 
@@ -54,6 +60,53 @@
 				"sap.uxap": {}
 			}
 		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "UI5OCRTickets.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"name": "Main",
+					"pattern": "",
+					"target": "Main"
+
+				},
+				{
+					"name": "Products",
+					"pattern": "Main",
+					"target": 	"Products"
+
+				},
+				{
+					"name": "InputProduct",
+					"pattern": "Products",
+					"target": 	"InputProduct"
+
+				}
+			],
+			"targets": {
+				"Main": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Main"
+
+				},
+
+				"Products": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Products"
+				},
+				"InputProduct": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "InputProduct"
+				}
+			}
+		},
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
@@ -64,6 +117,10 @@
 				"settings": {
 					"bundleName": "UI5OCRTickets.i18n.i18n"
 				}
+			},
+			"oRegExModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "PatternsRegEx"
 			}
 		},
 		"resources": {
