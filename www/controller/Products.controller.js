@@ -51,9 +51,37 @@ sap.ui.define([
         onCloseHeaderDialog : function () {
             this.getView().byId("headerDialog").close();
         },
+        onCopyHeader : function(oEvent) {
+            var itemSelected = oEvent.oSource._$ItemPressed.context.innerText;
+            this.getView().byId("headerDialog").close();
 
+            var rWord = /(\S)\w+/g;
+            var sList =  itemSelected.match(rWord);
 
+            var listHModel = [];
 
+            for(var i = 0; i < sList.length; i++){
+                var valToPush = {
+                    text: sList[i]
+                };
+                listHModel.push(valToPush);
+
+            }
+
+            var oHeaderModel = new sap.ui.model.json.JSONModel({
+                input : listHModel
+            });
+
+            this.getView().setModel(oHeaderModel, "headerModel");
+            var buttonVisibility = this.getView().byId("buttonAdd").setVisible(true);
+
+        },
+
+        onAddProduct : function(){
+            var onRootPage = sap.ui.core.UIComponent.getRouterFor(this);
+            onRootPage.navTo("InputProduct");
+
+        }
 
     });
 });

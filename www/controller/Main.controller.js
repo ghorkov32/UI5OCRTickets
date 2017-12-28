@@ -31,9 +31,13 @@ sap.ui.define([
                 })
                 .finally(resultOrError => {
 
-                    var oDate = /(\d{2}(?:\/|-|\s)){2}\d{2}/;
-                    var oPlace = /\b.+S(?:\.)?(?:\s)?A(?:\.)?/i;
+                    var regDate = other.getOwnerComponent().getModel("oRegExModel").oData.Date.regEx;
+                    var flagDate = other.getOwnerComponent().getModel("oRegExModel").oData.Date.flag;
+                    var oDate = new RegExp(regDate, flagDate);
                     var sDate = resultOrError.text.match(oDate);
+                    var regPlace = other.getOwnerComponent().getModel("oRegExModel").oData.Place.regEx;
+                    var flagPlace = other.getOwnerComponent().getModel("oRegExModel").oData.Place.flag;
+                    var oPlace = new RegExp(regPlace, flagPlace);
                     var sPlace = resultOrError.text.match(oPlace);
 
                     try {
@@ -55,9 +59,13 @@ sap.ui.define([
 
                     }
 
-                    var oCuil = /\d{2}[-]\d{8}[-]\d{1}/g;
+                    var regCompanyCode = other.getOwnerComponent().getModel("oRegExModel").oData.CompanyCode.regEx;
+                    var flagCompanyCode = other.getOwnerComponent().getModel("oRegExModel").oData.CompanyCode.flag;
+                    var oCuil = new RegExp(regCompanyCode, flagCompanyCode);
                     var sCuil = resultOrError.text.match(oCuil);
-                    var oTotal =/(?:Total\:\s)(?:\w+\s)(\d+)(?:.|,|s)(\d+)/;
+                    var regTotal = other.getOwnerComponent().getModel("oRegExModel").oData.Total.regEx;
+                    var flagTotal = other.getOwnerComponent().getModel("oRegExModel").oData.Total.flag;
+                    var oTotal = new RegExp(regTotal, flagTotal);
                     var sTotal =resultOrError.text.match(oTotal);
                     try {
                         other.byId("__input1").setValue(sCuil[0]);
